@@ -9,7 +9,8 @@ namespace UnitTestProject1
         public void TestMethod1()
         {
             //dummy method
-            GnuPlotDotNetLib.Class1 junk = new GnuPlotDotNetLib.Class1();
+            //GnuPlotDotNetLib.Class1 junk = new GnuPlotDotNetLib.Class1();
+            //Microsoft.Win32   
         }
     }
 }

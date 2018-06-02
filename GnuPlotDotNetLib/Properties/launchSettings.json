@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "GnuPlotDotNetLib": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\Powershell.exe",
+      "commandLineArgs": "-file Launch.ps1  -noexit"
+    }
+  }
+}
