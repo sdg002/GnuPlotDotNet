@@ -7,8 +7,8 @@
     <ProjectGuid>{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GnuPlotDotNetLibFwk</RootNamespace>
-    <AssemblyName>GnuPlotDotNetLibFwk</AssemblyName>
+    <RootNamespace>GnuplotDotNetLib</RootNamespace>
+    <AssemblyName>GnuplotDotNetLibFwk</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

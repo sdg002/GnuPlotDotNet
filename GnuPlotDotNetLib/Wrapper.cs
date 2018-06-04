@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GnuPlotDotNetLib
+namespace GnuplotDotNetLib
 {
     public class Wrapper
     {
@@ -21,13 +21,33 @@ namespace GnuPlotDotNetLib
             //TODO
             _stub.Redraw(this);
         }
+        /// <summary>
+        /// Empties the current state of the chart.
+        /// All properties are nullified.
+        /// </summary>
         public void Clear()
         {
-            _stub.Clear();
+            this.XAxisLabel = "";
+            this.YAxisLabel = "";
+            this.ChartTitle = "";
+            this.IsGridVisible = false;
+            _stub.Redraw(this);
         }
-
-        public string XAxisTitle { get; set; }
-
-        public string YAxisTitle { get; set; }
+        /// <summary>
+        /// Sets the label of the X axis
+        /// </summary>
+        public string XAxisLabel { get; set; }
+        /// <summary>
+        /// Sets the label of the Y axis
+        /// </summary>
+        public string YAxisLabel { get; set; }
+        /// <summary>
+        /// Sets the title of the chart
+        /// </summary>
+        public string ChartTitle { get; set; }
+        /// <summary>
+        /// When set to True , a grid is displayed
+        /// </summary>
+        public bool IsGridVisible { get; set; }
     }
 }

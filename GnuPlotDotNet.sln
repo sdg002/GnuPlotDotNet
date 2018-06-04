@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2018
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GnuPlotDotNetLibCore", "GnuPlotDotNetLib\GnuPlotDotNetLibCore.csproj", "{88C194CE-756F-4E64-9942-CCA494C0D253}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GnuPlotDotNetLibCore", "GnuPlotDotNetLib\GnuPlotDotNetLibCore.csproj", "{88C194CE-756F-4E64-9942-CCA494C0D253}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{869B0C56-6C95-4D98-A3CE-C0B49459918A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{869B0C56-6C95-4D98-A3CE-C0B49459918A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GnuPlotDotNetLibFwk", "GnuPlotDotNetLibFwk\GnuPlotDotNetLibFwk.csproj", "{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GnuplotDotNetLibFwk", "GnuPlotDotNetLibFwk\GnuplotDotNetLibFwk.csproj", "{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
