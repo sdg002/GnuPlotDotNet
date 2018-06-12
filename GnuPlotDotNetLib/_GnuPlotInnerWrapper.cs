@@ -7,6 +7,9 @@ using System.IO;
 
 namespace GnuplotDotNetLib
 {
+    /// <summary>
+    /// Creates commands that GnuPlot can understand and passed them to the STDIN of GnuPlot.exe
+    /// </summary>
     public class _GnuPlotInnerWrapper : IExecutableStub
     {
         private string gnuPlotPath;
@@ -40,10 +43,15 @@ namespace GnuplotDotNetLib
             _LaunchGnuIfNotRunning();
             WriteLine("clear");
         }
-
+        /// <summary>
+        /// The outer layer will pass information about what to plot, how to plot?
+        /// This method will create the GNUPLOT commands and pipe them to GNUPLOT stdin
+        /// </summary>
+        /// <param name="wrapper"></param>
         public void Redraw(Wrapper wrapper)
         {
             _LaunchGnuIfNotRunning();
+            //TODO Use Hold option to batch the commands
             WriteLine("reset");
             WriteLine("clear");
             WriteLine($"set xlabel '{wrapper.XAxisLabel}'");

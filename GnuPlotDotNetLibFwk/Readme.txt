@@ -1,4 +1,16 @@
 ﻿
+(*)Create a ctor in Wrapper class that can be used for unit testing. This ctor will accept a stub implementation of IExecutableStub
+(*)Read path from registry inside default ctor of Wrapper class. Show exception message and indicate that another ctor exists if path ot GnuPlot.exe is to be overriden
+(*)Create a ctor in Wrapper class that will accept the path of EXE , just in case registry is faulty and user wants to override.
+(*)Create unit test project
+(*)Create a plot Class that represents a single plot . The class Plot should have the properties
+	legend
+	style of dash
+	style of points
+	anything that is plot specific
+	Source of data
+(*)Wrapper class should have a collection property List<Plot>
+(*)Think about the source of data (3d?)
 
 
 Old sample code
