@@ -4,15 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GnuplotDotNetLib</RootNamespace>
-    <AssemblyName>GnuplotDotNetLibFwk</AssemblyName>
+    <ProjectGuid>{B8DCBE7D-7C2A-4523-AB8A-762D2F100E85}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>StubGnuExe</RootNamespace>
+    <AssemblyName>StubGnuExe</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -20,9 +21,10 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -41,36 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\GnuPlotDotNetLib\Constants.cs">
-      <Link>Constants.cs</Link>
-    </Compile>
-    <Compile Include="..\GnuPlotDotNetLib\IExecutableStub.cs">
-      <Link>IExecutableStub.cs</Link>
-    </Compile>
-    <Compile Include="..\GnuPlotDotNetLib\InMemoryPlot.cs">
-      <Link>InMemoryPlot.cs</Link>
-    </Compile>
-    <Compile Include="..\GnuPlotDotNetLib\PhysicalFilePlot.cs">
-      <Link>PhysicalFilePlot.cs</Link>
-    </Compile>
-    <Compile Include="..\GnuPlotDotNetLib\PlotBase.cs">
-      <Link>PlotBase.cs</Link>
-    </Compile>
-    <Compile Include="..\GnuPlotDotNetLib\Wrapper.cs">
-      <Link>Wrapper.cs</Link>
-    </Compile>
-    <Compile Include="..\GnuPlotDotNetLib\_GnuPlotInnerWrapper.cs">
-      <Link>_GnuPlotInnerWrapper.cs</Link>
-    </Compile>
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Launch.ps1">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Readme.txt" />
+    <ProjectReference Include="..\GnuPlotDotNetLibFwk\GnuplotDotNetLibFwk.csproj">
+      <Project>{6fa94faa-fe1e-42c5-9ddd-88919c728a5d}</Project>
+      <Name>GnuplotDotNetLibFwk</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

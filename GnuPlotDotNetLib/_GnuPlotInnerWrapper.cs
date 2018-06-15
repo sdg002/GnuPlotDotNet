@@ -53,18 +53,27 @@ namespace GnuplotDotNetLib
             _LaunchGnuIfNotRunning();
             //TODO Use Hold option to batch the commands
             WriteLine("reset");
-            WriteLine("clear");
-            WriteLine($"set xlabel '{wrapper.XAxisLabel}'");
-            WriteLine($"set ylabel '{wrapper.YAxisLabel}'");
-            WriteLine($"set title '{wrapper.ChartTitle}'");
+            //WriteLine("clear");
+            if (string.IsNullOrWhiteSpace(wrapper.XAxisLabel)==false)
+            {
+                WriteLine($"set xlabel '{wrapper.XAxisLabel}'");
+            }
+            if (string.IsNullOrWhiteSpace(wrapper.YAxisLabel)==false)
+            {
+                WriteLine($"set ylabel '{wrapper.YAxisLabel}'");
+            }
+            if (string.IsNullOrWhiteSpace(wrapper.ChartTitle) == false)
+            {
+                WriteLine($"set title '{wrapper.ChartTitle}'");
+            }
             if (wrapper.IsGridVisible)
             {
                 WriteLine($"set grid");
             }
-            else
-            {
-                WriteLine($"unset grid");
-            }
+            //else
+            //{
+            //    WriteLine($"unset grid");
+            //}
             WriteLine("plot sin(x)");
             //you were ehre//thsi works, you will need to take this forward
         }
@@ -81,12 +90,14 @@ namespace GnuplotDotNetLib
                 Process[] processlist = Process.GetProcesses();
                 shouldLaunchNewInstanceOfGnuPlot = !processlist.Any(proc => proc.Id == _procGnuPlot.Id);
             }
+            Trace.WriteLine($"GNUWRAPPER:Should launch new process {shouldLaunchNewInstanceOfGnuPlot}");
             if (shouldLaunchNewInstanceOfGnuPlot==false) return;//Process already exists
             _procGnuPlot = new Process();
             _procGnuPlot.StartInfo.FileName = gnuPlotPath;
             _procGnuPlot.StartInfo.UseShellExecute = false;
             _procGnuPlot.StartInfo.RedirectStandardInput = true;
             _procGnuPlot.Start();
+            Trace.WriteLine($"GNUWRAPPER:Just launced exe {gnuPlotPath}, PID={_procGnuPlot.Id}");
             _GnupStdinStreamWriter = _procGnuPlot.StandardInput;
         }
         public void WriteLine(string gnuplotcommands)
@@ -101,5 +112,17 @@ namespace GnuplotDotNetLib
             _GnupStdinStreamWriter.Flush();
         }
 
+        public void Cleanup()
+        {
+            try
+            {
+                _procGnuPlot.Kill();
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+        }
     }
 }

@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTestProject1", "UnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GnuplotDotNetLibFwk", "GnuPlotDotNetLibFwk\GnuplotDotNetLibFwk.csproj", "{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProjectFwk", "UnitTestProjectFwk\UnitTestProjectFwk.csproj", "{771EA228-1455-461B-B8BF-CDA2BAAE5D6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StubGnuExe", "StubGnuExe\StubGnuExe.csproj", "{B8DCBE7D-7C2A-4523-AB8A-762D2F100E85}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6FA94FAA-FE1E-42C5-9DDD-88919C728A5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771EA228-1455-461B-B8BF-CDA2BAAE5D6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771EA228-1455-461B-B8BF-CDA2BAAE5D6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771EA228-1455-461B-B8BF-CDA2BAAE5D6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771EA228-1455-461B-B8BF-CDA2BAAE5D6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8DCBE7D-7C2A-4523-AB8A-762D2F100E85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8DCBE7D-7C2A-4523-AB8A-762D2F100E85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8DCBE7D-7C2A-4523-AB8A-762D2F100E85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8DCBE7D-7C2A-4523-AB8A-762D2F100E85}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

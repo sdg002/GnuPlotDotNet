@@ -20,5 +20,6 @@ namespace GnuplotDotNetLib
         /// Why? We clear the state of the outer wrapper and just invoke Redraw()
         /// </summary>
         void Clear();
+        void Cleanup();
     }
 }
